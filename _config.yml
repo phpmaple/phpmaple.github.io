@@ -12,7 +12,7 @@ dribbble_user: koofrank
 weibo_share: true # 是否开启微博分享按钮
 description: stay
 #Disqus Comments
-disqus_short_name: koofrankblog
+disqus_short_name: koofrank
 disqus_show_comment_count: true
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
