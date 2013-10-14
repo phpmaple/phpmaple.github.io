@@ -6,4 +6,5 @@ comments: true
 sharing: true
 footer: true
 ---
-{% img [center] [http://d.pr/i/u4eF] [320] [320] %}
+
+{% img center http://d.pr/i/u4eF 250 250 'koofrank' 'An image of koofrank' %}
