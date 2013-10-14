@@ -10,10 +10,8 @@ simple_search: http://google.com/search
 weibo_user: phpmaple # 微博数字 ID 或域名 ID
 dribbble_user: koofrank
 weibo_share: true # 是否开启微博分享按钮
-description: stay
-#Disqus Comments
-disqus_short_name: koofrank
-disqus_show_comment_count: true
+description: stay foolish
+
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -39,6 +37,7 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
+category_title_prefix: "分类："
 markdown: rdiscount
 rdiscount:
   extensions:
@@ -96,8 +95,8 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: koofrank
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id:
