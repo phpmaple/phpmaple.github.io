@@ -7,4 +7,4 @@ sharing: true
 footer: true
 ---
 
-{% img center http://d.pr/i/u4eF.png 250 250 'koofrank' 'An image of koofrank' %}
+{% img center /2013/10/psb.png 250 250 'koofrank' 'An image of koofrank' %}
