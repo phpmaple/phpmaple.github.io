@@ -10,7 +10,7 @@ simple_search: http://google.com/search
 weibo_user: phpmaple # 微博数字 ID 或域名 ID
 dribbble_user: koofrank
 weibo_share: true # 是否开启微博分享按钮
-description: 
+description: stay
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -22,7 +22,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email:koofranker@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
