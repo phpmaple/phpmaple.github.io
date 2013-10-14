@@ -1,8 +1,0 @@
----
-layout: post
-title: "关于我"
-date: 2013-10-14 20:57
-comments: true
-categories: 
----
-{% img center /2013/10/psb.png 250 250 'koofrank' 'An image of koofrank' %}
