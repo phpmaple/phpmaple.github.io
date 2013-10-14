@@ -4,7 +4,7 @@
   <title><![CDATA[KooFrank's Blog]]></title>
   <link href="http://phpmaple.github.io/atom.xml" rel="self"/>
   <link href="http://phpmaple.github.io/"/>
-  <updated>2013-10-14T20:57:39+08:00</updated>
+  <updated>2013-10-14T21:00:17+08:00</updated>
   <id>http://phpmaple.github.io/</id>
   <author>
     <name><![CDATA[koofrank]]></name>
@@ -12,14 +12,5 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[关于我]]></title>
-    <link href="http://phpmaple.github.io/blog/2013/10/14/me/"/>
-    <updated>2013-10-14T20:57:00+08:00</updated>
-    <id>http://phpmaple.github.io/blog/2013/10/14/me</id>
-    <content type="html"><![CDATA[<p><img class="center" src="http://phpmaple.github.io/2013/10/psb.png" width="250" height="250" title="koofrank" alt="An image of koofrank"></p>
-]]></content>
-  </entry>
   
 </feed>
