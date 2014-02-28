@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://phpmaple.github.io/sitemap.xml 
