@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Xcode之buildPhases"
+title: "Xcode之BuildPhases"
 date: 2014-03-13 19:04
 comments: true
 categories: iOS生涯集
