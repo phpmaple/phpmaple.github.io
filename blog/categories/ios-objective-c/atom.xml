@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[分类：iOS生涯集 | KooFrank's Blog]]></title>
-  <link href="http://phpmaple.github.io/blog/categories/iossheng-ya-ji/atom.xml" rel="self"/>
+  <title><![CDATA[分类：iOS,Objective-C | KooFrank's Blog]]></title>
+  <link href="http://phpmaple.github.io/blog/categories/ios-objective-c/atom.xml" rel="self"/>
   <link href="http://phpmaple.github.io/"/>
-  <updated>2014-04-03T15:34:17+08:00</updated>
+  <updated>2014-04-03T15:49:27+08:00</updated>
   <id>http://phpmaple.github.io/</id>
   <author>
     <name><![CDATA[koofrank]]></name>
@@ -50,92 +50,6 @@ find "${SRCROOT}" \( -name "*.h" -or -name "*.m" \) -and \( -path "${SRCROOT}/Po
 <p>5.最后再推荐两款xcode插件，代码规范/美化工具<a href="https://github.com/benoitsan/BBUncrustifyPlugin-Xcode" target="_blank">BBUncrustifyPlugin-Xcode</a>,这边是配置文件<a href="https://github.com/bengardner/uncrustify/blob/master/etc/objc.cfg" target="_blank">关于objc语言的</a>。第二个插件是推荐给更新到xcode5.1的，由于改善了autolayout，可能这款插件可以更方便的布局<a href="https://github.com/RolandasRazma/RRConstraintsPlugin" target="_blank">RRConstraintsPlugin</a></p>
 
 <p>结语：如果大家需要Moarfonts，我可以共享一下<a href="https://www.dropbox.com/s/21cokfqw8gvgd0v/moarfonts-1.0.3.zip" target="_blank">Moarfonts</a>如果觉得可以可以支持一下作者，如果小伙伴有更好的实用的Build Phrases可以分享<a href="http://weibo.com/phpmaple" target="_blank">@Koofrank</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[启程]]></title>
-    <link href="http://phpmaple.github.io/blog/2014/02/28/my-first-article/"/>
-    <updated>2014-02-28T13:39:00+08:00</updated>
-    <id>http://phpmaple.github.io/blog/2014/02/28/my-first-article</id>
-    <content type="html"><![CDATA[<p><img src="/images/2014/02/28/start.jpg"></p>
-
-<p>引言：其实这个网站已经有了很长时间，但是一直都没有写下一篇博文，可能是没有时间，可能是偷懒，可以找出一大堆的理由，但是久而久之，发现学的越多，似乎知道的就越少了，所以还是决定记录点什么，哪怕只是一些憋足的字也好，坚信：坚持一些东西，总会获得一些回报。</p>
-
-<!--more-->
-
-
-<h2>下面介绍一下我常用的iOS开发或者优化的小工具</h2>
-
-<p>由于很多工具大多数博客都已经介绍过了，我就列举一些我认为还不错但是大家不常列举的：</p>
-
-<hr />
-
-<h3><a href="https://github.com/krzysztofzablocki/crafter" target="_blank">Crafter</a></h3>
-
-<p>你是否经常见一个Project之后你经常会建立一个Podfile，然后把自己一些几乎每个项目都要用的第三方库加进去或者，添加ignore文件等等重复的事情，Crafter 是一个可以自动化初始化你xcode工程的默认配置，是由Ruby语言写的。一个script即可以自动化帮你配置好你的项目。</p>
-
-<h3><a href="http://wasted.werk01.de/" target="_blank">Wasted</a></h3>
-
-<p>你是否关心过一个问题，项目体积越来越大，然而图片的体积占了大部分，Wasted只要选取一个ipa文件就可以帮你分析出哪些可以优化，然后生成了一个文件夹是他帮你优化过的图片还有一个表格，你可以选择性的替换原项目的图片，肉眼几乎感觉不到优化前后的区别。</p>
-
-<h3><a href="https://github.com/jeffhodnett/Unused" target="_blank">Unused</a></h3>
-
-<p>之前看到很多人已经说过可以用一个script来检测出项目中未使用过的图片然后用生成一个文件来告诉你哪些没有使用过，这个工具用可视化的界面来检测告诉你更亲切。</p>
-
-<h3><a href="https://itunes.apple.com/cn/app/linguan/id477163052?mt=12" target="_blank">Linguan</a></h3>
-
-<p>是否遇到过一种情况项目起初只有一种语言，经过后续很多版本更新之后老板要求你出个多过语言版本，但是那么多的项目文件和xib，显然手动的去寻找是不科学的，这款工具就可以帮你找出项目里的所有string包括xib中的然后可以导出.Strings格式，然后交给你们翻译的就可以了。</p>
-
-<h2>然后在翻译一段iOS小文（水平有限）</h2>
-
-<hr />
-
-<h3>声明Blocks内联</h3>
-
-<p>译自<a href="http://macoscope.com/blog/calling-blocks-inline/" target="_blank">Calling Blocks Inline</a></p>
-
-<p>我最新发现了一个在oc中使用Blocks非常有趣的的方法,它定义起来也许像in javascript里那样，样子是这样的：
-```objective-c
-const NSInteger value = (^NSInteger {</p>
-
-<pre><code>switch (type) {
-    case TypeOne:
-        return 1;
-
-    case TypeTwo:
-        return 2;
-
-    case TypeUnknown:
-    case TypeUnspecified:
-        return NSNotFound;
-
-    default:
-        return 0;
-}
-</code></pre>
-
-<p>}());
-```</p>
-
-<p>首选，它在定义这个Block的同时赋值给了我们的变量，然后指定了变量是<code>const</code>类型，Block内所有相关的代码都是为了计算出值赋值给变量，这样一来代码更容易阅读，而且这都可以被GCC code block extension所识别，这种方法实现的有点就是可以有<code>return</code>这个关键词，这使得我们可以是用<code>switch</code>并且循环里不使用<code>break</code>，缺点是不得不重复声明变量的类型，而且当我们遇到<code>UISwipeGestureRecognizerDirection</code>是非常讨厌的，例如：</p>
-
-<p>```objective-c
-const BOOL anyValueIsXyz = (^BOOL {
-  for (QwertyValue *value in values) {</p>
-
-<pre><code>if (value.isXyz) {
-  return YES;
-}
-</code></pre>
-
-<p>  }</p>
-
-<p>  return NO;
-}());
-```</p>
-
-<p>大家认为呢？</p>
 ]]></content>
   </entry>
   

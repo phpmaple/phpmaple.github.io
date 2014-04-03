@@ -4,7 +4,7 @@
   <title><![CDATA[KooFrank's Blog]]></title>
   <link href="http://phpmaple.github.io/atom.xml" rel="self"/>
   <link href="http://phpmaple.github.io/"/>
-  <updated>2014-04-03T15:34:17+08:00</updated>
+  <updated>2014-04-03T15:49:27+08:00</updated>
   <id>http://phpmaple.github.io/</id>
   <author>
     <name><![CDATA[koofrank]]></name>
@@ -114,9 +114,12 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h3>Xcode一打开就Crash重装无效</h3>
 
-<p>最终发现<a href="https://github.com/ricobeck/KFCocoaPodsPlugin" target="_blank">KFCocoaPodsPlugin</a>是这个插件的问题，可能是我系统升级到10.9.2了与这个插件不兼容导致的，但是有的人不会出现，我已经联系了作者，最后知道了原来xcode卸载重装，第三方插件是不会清除的。</p>
+
+<p class='info warning' data-title='Xcode一打开就Crash重装无效'>最终发现<a href="https://github.com/ricobeck/KFCocoaPodsPlugin" target="_blank">KFCocoaPodsPlugin</a>是这个插件的问题，可能是我系统升级到10.9.2了与这个插件不兼容导致的，但是有的人不会出现，我已经联系了作者，最后知道了原来xcode卸载重装，第三方插件是不会清除的。</p>
+
+
+
 ]]></content>
   </entry>
   
