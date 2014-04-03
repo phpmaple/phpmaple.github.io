@@ -31,7 +31,7 @@ sqlite查看工具，可能大家都使用过MesaSQLite这个工具，但是我�
 
 我们都知道UIbutton可以中使用UIEdgeInsetsMake可以改变text和image来居中，但是网上大部分的例子都没有考虑到当字符长度很长出现省略号的时候就不会居中，下面这个UIButton的category可以实现无论字多长都会居中而且可以设置图片在文字上面还是下面。
 
-```objective-c
+```objective-c button居中
 - (void)centerImageAndButton:(CGFloat)gap imageOnTop:(BOOL)imageOnTop {
 	NSInteger sign = imageOnTop ? 1 : -1;
 	
