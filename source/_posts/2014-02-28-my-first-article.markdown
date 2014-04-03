@@ -3,7 +3,7 @@ layout: post
 title: "启程"
 date: 2014-02-28 13:39
 comments: true
-categories: iOS生涯集
+categories: iOS,Objective-C,iOS开发工具
 ---
 {% img /images/2014/02/28/start.jpg %}
 

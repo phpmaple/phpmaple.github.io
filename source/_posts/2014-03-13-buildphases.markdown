@@ -3,7 +3,7 @@ layout: post
 title: "Xcode之BuildPhases"
 date: 2014-03-13 19:04
 comments: true
-categories: iOS生涯集
+categories: iOS,Objective-C
 ---
 {% img /images/2014/03/13/build-phases.jpg %}
 

@@ -3,7 +3,7 @@ layout: post
 title: "每周一记"
 date: 2014-03-08 17:45
 comments: true
-categories: 每周一记
+categories: iOS,Objective-C,iOS开发工具
 ---
 {% img /images/2014/03/08/week.jpg %}
 
@@ -31,7 +31,7 @@ sqlite查看工具，可能大家都使用过MesaSQLite这个工具，但是我�
 
 我们都知道UIbutton可以中使用UIEdgeInsetsMake可以改变text和image来居中，但是网上大部分的例子都没有考虑到当字符长度很长出现省略号的时候就不会居中，下面这个UIButton的category可以实现无论字多长都会居中而且可以设置图片在文字上面还是下面。
 
-```objective-c button居中
+``` objective-c button居中
 - (void)centerImageAndButton:(CGFloat)gap imageOnTop:(BOOL)imageOnTop {
 	NSInteger sign = imageOnTop ? 1 : -1;
 	
@@ -43,8 +43,10 @@ sqlite查看工具，可能大家都使用过MesaSQLite这个工具，但是我�
 }
 ```
 
-###Xcode一打开就Crash重装无效
+{%ribbonp warning Xcode一打开就Crash重装无效%}
 最终发现<a href="https://github.com/ricobeck/KFCocoaPodsPlugin" target="_blank">KFCocoaPodsPlugin</a>是这个插件的问题，可能是我系统升级到10.9.2了与这个插件不兼容导致的，但是有的人不会出现，我已经联系了作者，最后知道了原来xcode卸载重装，第三方插件是不会清除的。
+{%endribbonp%}
+
 
 
 
