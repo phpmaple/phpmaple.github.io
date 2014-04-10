@@ -4,7 +4,7 @@
   <title><![CDATA[分类：iOS,Objective-C,iOS开发工具 | KooFrank's Blog]]></title>
   <link href="http://phpmaple.github.io/blog/categories/ios-objective-c-ioskai-fa-gong-ju/atom.xml" rel="self"/>
   <link href="http://phpmaple.github.io/"/>
-  <updated>2014-04-03T15:49:27+08:00</updated>
+  <updated>2014-04-10T16:10:44+08:00</updated>
   <id>http://phpmaple.github.io/</id>
   <author>
     <name><![CDATA[koofrank]]></name>
@@ -49,7 +49,7 @@
 
 <p>我们都知道UIbutton可以中使用UIEdgeInsetsMake可以改变text和image来居中，但是网上大部分的例子都没有考虑到当字符长度很长出现省略号的时候就不会居中，下面这个UIButton的category可以实现无论字多长都会居中而且可以设置图片在文字上面还是下面。</p>
 
-<p>``` objective-c button居中
+<p>``` objc button居中
 &ndash; (void)centerImageAndButton:(CGFloat)gap imageOnTop:(BOOL)imageOnTop {</p>
 
 <pre><code>NSInteger sign = imageOnTop ? 1 : -1;

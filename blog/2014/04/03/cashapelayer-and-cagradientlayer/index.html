@@ -1,24 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[KooFrank's Blog]]></title>
-  <link href="http://phpmaple.github.io/atom.xml" rel="self"/>
-  <link href="http://phpmaple.github.io/"/>
-  <updated>2014-04-10T16:10:44+08:00</updated>
-  <id>http://phpmaple.github.io/</id>
-  <author>
-    <name><![CDATA[koofrank]]></name>
-    <email><![CDATA[koofranker@gmail.com]]></email>
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CAShapeLayer和CAGradientLayer - KooFrank's Blog</title>
+	<meta name="author" content="koofrank">
 
-  
-  <entry>
-    <title type="html"><![CDATA[CAShapeLayer和CAGradientLayer]]></title>
-    <link href="http://phpmaple.github.io/blog/2014/04/03/cashapelayer-and-cagradientlayer/"/>
-    <updated>2014-04-03T17:43:00+08:00</updated>
-    <id>http://phpmaple.github.io/blog/2014/04/03/cashapelayer-and-cagradientlayer</id>
-    <content type="html"><![CDATA[<p><img src="http://phpmaple.github.io/images/2014/04/03/start.jpg"></p>
+	
+	<meta name="description" content="CAShapeLayer和CAGradientLayer 两个动画效果来了解一下CALayer的两个重要的subClass，CAGradientLayer和CAShapeLayer。
+微视录制视频的时候那个进度效果和Spark相机类似，但是个人还是比较喜欢Spark相机的录制的效果。 &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="KooFrank's Blog" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://phpmaple.github.io/blog/2014/04/03/cashapelayer-and-cagradientlayer/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		document.write("<img src='http://www.gravatar.com/avatar/" + MD5("koofranker@gmail.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+	</script>
+</div>
+<h1><a href="/">KooFrank's Blog</a></h1>
+<p class="subtitle">Just another fan of Steve Jobs.</p>
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">首页</a></li>
+  <li><a href="/blog/archives">文章列表</a></li>
+  <li><a href="/about">关于我</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		<a class="weibo" href="http://www.weibo.com/phpmaple" title="Weibo">Weibo</a>
+		
+		
+		
+		
+		
+		<a class="github" href="https://github.com/phpmaple" title="GitHub">GitHub</a>
+		
+		
+		<a class="dribbble" href="http://www.dribbble.com/koofrank" title="Dribbble">Dribbble</a>
+		
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+你的时间有限，不要浪费于重复别人的生活。不要让别人的观点淹没了你内心的声音。
+
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">CAShapeLayer和CAGradientLayer</h1>
+	<div class="entry-content" itemprop="articleBody"><p><img src="/images/2014/04/03/start.jpg"></p>
 
 <p>两个动画效果来了解一下CALayer的两个重要的subClass，CAGradientLayer和CAShapeLayer。
 微视录制视频的时候那个进度效果和Spark相机类似，但是个人还是比较喜欢Spark相机的录制的效果。</p>
@@ -28,7 +91,7 @@
 
 <h3>CAShapeLayer</h3>
 
-<p><img src="http://phpmaple.github.io/images/2014/04/03/SparkProgress.gif"></p>
+<p><img src="/images/2014/04/03/SparkProgress.gif"></p>
 
 <p>我们做一个和Spark相机一样的圆形进度，每一段有一种颜色，标识不同时间段录的视频。</p>
 
@@ -81,11 +144,11 @@
 
 <p>如果我们build运行成功的话应该是这样的。</p>
 
-<p><img src="http://phpmaple.github.io/images/2014/04/03/empty-circle.png"></p>
+<p><img src="/images/2014/04/03/empty-circle.png"></p>
 
 <p>现在我们需要一个方法来实现开始和停止进度，如果我们回头去看<a href="https://www.sparkcamera.com/" target="_blank">Spark Camera</a>,我们需要按下手指才会开始松开结束，首先<code>UITapGestureRecognizer</code>和<code>UIControlEventTouchUpInside</code>没有方法检测按下和松开，但是我们可以用<code>UIControlEventTouchDown</code>，但是我们在Reveal里面并没有看到它是这么做的，所以最后决定使用复写<code>UIResponder</code>的<code>touchesBegan:WithEvent: and touchesEnded:WithEvent:</code>方法来实现。</p>
 
-<p><img src="http://phpmaple.github.io/images/2014/04/03/spark-revealed.png"></p>
+<p><img src="/images/2014/04/03/spark-revealed.png"></p>
 
 <p>有个这个方法后，我们可以控制<code>CAShapeLayer</code>的<code>strokeEnd</code>的属性大小来实现动画效果，首页我们先设置它的值为0然后把这个layer添加作为子类。</p>
 
@@ -307,7 +370,7 @@
 
 <h3>CAGradientLayer</h3>
 
-<p><img src="http://phpmaple.github.io/images/2014/04/03/GradientProgressView.gif"></p>
+<p><img src="/images/2014/04/03/GradientProgressView.gif"></p>
 
 <p>首页我们创建一个<code>UIView</code>的子类，然后我们使用<code>CAGradientLayer</code>作为默认的<code>CALayer</code>。</p>
 
@@ -490,223 +553,85 @@
 <li><p><a href="https://nrj.io/animated-progress-view-with-cagradientlayer" target="_blank">Animated progress view with CAGradientLayer</a></p></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Xcode之BuildPhases]]></title>
-    <link href="http://phpmaple.github.io/blog/2014/03/13/buildphases/"/>
-    <updated>2014-03-13T19:04:00+08:00</updated>
-    <id>http://phpmaple.github.io/blog/2014/03/13/buildphases</id>
-    <content type="html"><![CDATA[<p><img src="http://phpmaple.github.io/images/2014/03/13/build-phases.jpg"></p>
+</div>
 
-<p>引言：Build Phases是Xcode在build的时候执行的一些任务，这次就关于代码优化和重构方面，来说说Build Phases可以帮助我们的一些Script，还请大家补充。</p>
+</article>
 
-<!--more-->
-
-
-<h2>Build Phrases与Xcode插件</h2>
-
-<p>1.谈到重构，如果我们想在后期把我们的项目重构一下，这不仅可以让我们重新巩固一下用到的iOS知识，还可以提高我们对整个项目理解和代码水平，其中重构的最简单的一个方法就是从代码行数开始检查，从我了解和经验我们暂可以规定每行代码不超过80个字符，每个函数不超过限定在50-80行之间，这样对于我们开发者以后的维护来说，简洁的代码更容易进行修改和维护。每个类最好保持在400行以内，如果太多就可以考虑重构一下你的类了，我发现1000行代码看着真的头晕，下面一个Build Phrases就可以帮助你检查你所有m文件大于400行的类，warning提示你。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">find</span> <span class="s">&quot;${SRCROOT}&quot;</span> <span class="err">\</span><span class="p">(</span> <span class="o">-</span><span class="n">name</span> <span class="s">&quot;*.m&quot;</span> <span class="err">\</span><span class="p">)</span> <span class="o">-</span><span class="n">and</span> <span class="err">\</span><span class="p">(</span> <span class="o">-</span><span class="n">path</span> <span class="s">&quot;${SRCROOT}/Pods/*&quot;</span> <span class="o">-</span><span class="n">prune</span> <span class="o">-</span><span class="n">o</span> <span class="o">-</span>
-</span><span class='line'><span class="n">print0</span> <span class="err">\</span><span class="p">)</span> <span class="o">|</span> <span class="n">xargs</span> <span class="o">-</span><span class="mi">0</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">awk</span> <span class="err">&#39;</span><span class="n">$1</span> <span class="o">&gt;</span> <span class="mi">400</span> <span class="o">&amp;&amp;</span> <span class="n">$2</span> <span class="o">!=</span> <span class="s">&quot;total&quot;</span> <span class="p">{</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">NF</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="n">printf</span> <span class="s">&quot;%s%s&quot;</span><span class="p">,</span> <span class="n">$i</span><span class="p">,</span> <span class="s">&quot; &quot;</span><span class="p">}</span> <span class="n">print</span> <span class="n">$NF</span> <span class="s">&quot;:1: warning: File more than 400 lines (&quot;</span> <span class="n">$1</span> <span class="s">&quot;), consider refactoring.&quot;</span> <span class="p">}</span><span class="err">&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style addthis_16x16_style">
+	
+	<a class="addthis_button_sinaweibo"></a>
+	
+	
+	
+	<a class="addthis_button_twitter"></a>
+	
+	
+	
+	<a class="addthis_button_compact"></a>
+	<a class="addthis_counter addthis_bubble_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid="></script>
+</div>
 
 
-<p>如果你需要更好的改善你的代码推荐<a href="http://oclint.org/" target="_blank">OCLint</a>可以更好的帮你改善代码质量，可以配合<a href="https://github.com/facebook/xctool" target="_blank">xctool</a>很强大。如果你约束能里不大好，那推荐你<a href="https://itunes.apple.com/us/app/objective-clean/id713910413?mt=12" target="_blank">Objective-Clean</a>，这样如果你不符合规则就等着不能Build吧。其实这样蛮好的O.O。当然你也可以使用<a href="http://www.jetbrains.com/objc/" target="_blank">AppCode</a>这个强大的编辑器来改善。</p>
 
-<p>2.还有一个好的方法是经常在项目中使用TODO，FIXME等，这样可以帮助我们下次浏览项目快速定位和提醒你哪些代码需要继续改进，这段Build Phrases可以用warning的方式提醒你哪些需要处理，相比<a href="https://github.com/trawor/XToDo" target="_blank">XToDo</a>这个插件更为直观不需要你打开界面去寻找，直接提示，但是如果你要可视化界面也可以用XToDo这款插件，还是很不错的。</p>
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - koofrank -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">KEYWORDS</span><span class="o">=</span><span class="s">&quot;TODO|FIXME|\?\?\?:|\!\!\!:&quot;</span>
-</span><span class='line'><span class="n">find</span> <span class="s">&quot;${SRCROOT}&quot;</span> <span class="err">\</span><span class="p">(</span> <span class="o">-</span><span class="n">name</span> <span class="s">&quot;*.h&quot;</span> <span class="o">-</span><span class="n">or</span> <span class="o">-</span><span class="n">name</span> <span class="s">&quot;*.m&quot;</span> <span class="err">\</span><span class="p">)</span> <span class="o">-</span><span class="n">and</span> <span class="err">\</span><span class="p">(</span> <span class="o">-</span><span class="n">path</span> <span class="s">&quot;${SRCROOT}/Pods/*&quot;</span> <span class="o">-</span><span class="n">prune</span> <span class="o">-</span><span class="n">o</span> <span class="o">-</span><span class="n">print0</span> <span class="err">\</span><span class="p">)</span> <span class="o">|</span> <span class="n">xargs</span> <span class="o">-</span><span class="mi">0</span> <span class="n">egrep</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">filename</span> <span class="o">--</span><span class="n">line</span><span class="o">-</span><span class="n">number</span> <span class="o">--</span><span class="n">only</span><span class="o">-</span><span class="n">matching</span> <span class="s">&quot;($KEYWORDS).*\$&quot;</span> <span class="o">|</span> <span class="n">perl</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">e</span> <span class="s">&quot;s/($KEYWORDS)/ warning: \$1/&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>3.再推荐一个Xcode小技巧是Edit all in Scope 这个功能，这个功能就强大了，而且比较酷，适合进行大批量的修改变量和方法；选定一个想要修改的字符串，然后选择Edit－Edit all in Scope，然后在你输入的时候，所有该字符出现的地方都进行同步更改，看起来很cool的。</p>
-
-<p>4.再推荐一个工具，你也许会遇到项目中使用自定义的外部字体，虽然导入项目中修改plist文件可以用代码来改变字体，但是在xib中选择字体是没有，你必须连接到代码中修改，很麻烦，所以推荐一款工具安装后添加一个Build Phrases就可以在xib中随意的选择外部字体了。工具叫<a href="http://pitaya.ch/moarfonts/" target="_blank">Moarfonts</a>，如果项目，可以考虑一下，还是不错的。</p>
-
-<p>5.最后再推荐两款xcode插件，代码规范/美化工具<a href="https://github.com/benoitsan/BBUncrustifyPlugin-Xcode" target="_blank">BBUncrustifyPlugin-Xcode</a>,这边是配置文件<a href="https://github.com/bengardner/uncrustify/blob/master/etc/objc.cfg" target="_blank">关于objc语言的</a>。第二个插件是推荐给更新到xcode5.1的，由于改善了autolayout，可能这款插件可以更方便的布局<a href="https://github.com/RolandasRazma/RRConstraintsPlugin" target="_blank">RRConstraintsPlugin</a></p>
-
-<p>结语：如果大家需要Moarfonts，我可以共享一下<a href="https://www.dropbox.com/s/21cokfqw8gvgd0v/moarfonts-1.0.3.zip" target="_blank">Moarfonts</a>如果觉得可以可以支持一下作者，如果小伙伴有更好的实用的Build Phrases可以分享<a href="http://weibo.com/phpmaple" target="_blank">@Koofrank</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[每周一记]]></title>
-    <link href="http://phpmaple.github.io/blog/2014/03/08/weekreport/"/>
-    <updated>2014-03-08T17:45:00+08:00</updated>
-    <id>http://phpmaple.github.io/blog/2014/03/08/weekreport</id>
-    <content type="html"><![CDATA[<p><img src="http://phpmaple.github.io/images/2014/03/08/week.jpg"></p>
-
-<p>由于上次的博文发现大家对工具还是蛮感兴趣的，所以今天也是由工具开头。之后说一些我这周工作中遇到的问题，可以给大家分享一下。</p>
-
-<!--more-->
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
 
-<h2>工具介绍</h2>
+<script type="text/javascript">
+      var disqus_shortname = 'koofrank';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://phpmaple.github.io/blog/2014/04/03/cashapelayer-and-cagradientlayer/';
+        var disqus_url = 'http://phpmaple.github.io/blog/2014/04/03/cashapelayer-and-cagradientlayer/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
-<h3><a href="https://github.com/dblock/fui" target="_blank">FUI</a></h3>
 
-<p>可能我们应用中经常import了很多类，但是经过不停的修改后可能已经不需要导入这个类，可是我们没有删除#import，这样会导致我们编译速度变慢，这个工具就是帮你发现你导入但未使用的类。</p>
 
-<h3><a href="http://objclean.com/index.php" target="_blank">OBJECTIVE-CLEAN</a></h3>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-48511976-1']);
+		_gaq.push(['_trackPageview']);
 
-<p>这个工具可以更好的约束团队中每个人代码规范，可以设置一个配置文件，之后团队中每个人如何不符合代码规范就会提示警告和错误。</p>
-
-<h3><a href="https://itunes.apple.com/cn/app/liya/id455484422?mt=12" target="_blank">Liya</a></h3>
-
-<p>sqlite查看工具，可能大家都使用过MesaSQLite这个工具，但是我觉得这个工具更方便和友好，大家可以试试。</p>
-
-<h3><a href="http://luckymarmot.com/paw" target="_blank">Paw</a></h3>
-
-<p>一款可以管理HTTP &amp; REST API工具，界面非常漂亮，比chrome插件postman更友好，推荐给大家，可以更好的管理接口，定位问题。</p>
-
-<h2>工作中遇到的问题</h2>
-
-<h3>UIButton居中图片和文字</h3>
-
-<p>我们都知道UIbutton可以中使用UIEdgeInsetsMake可以改变text和image来居中，但是网上大部分的例子都没有考虑到当字符长度很长出现省略号的时候就不会居中，下面这个UIButton的category可以实现无论字多长都会居中而且可以设置图片在文字上面还是下面。</p>
-
-<figure class='code'><figcaption><span>button居中</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">centerImageAndButton:</span><span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">gap</span> <span class="nf">imageOnTop:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">imageOnTop</span> <span class="p">{</span>
-</span><span class='line'>  <span class="n">NSInteger</span> <span class="n">sign</span> <span class="o">=</span> <span class="n">imageOnTop</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="n">CGSize</span> <span class="n">imageSize</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">imageView</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">self</span><span class="p">.</span><span class="n">titleEdgeInsets</span> <span class="o">=</span> <span class="n">UIEdgeInsetsMake</span><span class="p">((</span><span class="n">imageSize</span><span class="p">.</span><span class="n">height</span><span class="o">+</span><span class="n">gap</span><span class="p">)</span><span class="o">*</span><span class="n">sign</span><span class="p">,</span> <span class="o">-</span><span class="n">imageSize</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="n">CGSize</span> <span class="n">titleSize</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">titleLabel</span><span class="p">.</span><span class="n">bounds</span><span class="p">.</span><span class="n">size</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">self</span><span class="p">.</span><span class="n">imageEdgeInsets</span> <span class="o">=</span> <span class="n">UIEdgeInsetsMake</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">titleSize</span><span class="p">.</span><span class="n">height</span><span class="o">+</span><span class="n">gap</span><span class="p">)</span><span class="o">*</span><span class="n">sign</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">titleSize</span><span class="p">.</span><span class="n">width</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
 
 
 
 
-<p class='info warning' data-title='Xcode一打开就Crash重装无效'>最终发现<a href="https://github.com/ricobeck/KFCocoaPodsPlugin" target="_blank">KFCocoaPodsPlugin</a>是这个插件的问题，可能是我系统升级到10.9.2了与这个插件不兼容导致的，但是有的人不会出现，我已经联系了作者，最后知道了原来xcode卸载重装，第三方插件是不会清除的。</p>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[启程]]></title>
-    <link href="http://phpmaple.github.io/blog/2014/02/28/my-first-article/"/>
-    <updated>2014-02-28T13:39:00+08:00</updated>
-    <id>http://phpmaple.github.io/blog/2014/02/28/my-first-article</id>
-    <content type="html"><![CDATA[<p><img src="http://phpmaple.github.io/images/2014/02/28/start.jpg"></p>
-
-<p>引言：其实这个网站已经有了很长时间，但是一直都没有写下一篇博文，可能是没有时间，可能是偷懒，可以找出一大堆的理由，但是久而久之，发现学的越多，似乎知道的就越少了，所以还是决定记录点什么，哪怕只是一些憋足的字也好，坚信：坚持一些东西，总会获得一些回报。</p>
-
-<!--more-->
-
-
-<h2>下面介绍一下我常用的iOS开发或者优化的小工具</h2>
-
-<p>由于很多工具大多数博客都已经介绍过了，我就列举一些我认为还不错但是大家不常列举的：</p>
-
-<hr />
-
-<h3><a href="https://github.com/krzysztofzablocki/crafter" target="_blank">Crafter</a></h3>
-
-<p>你是否经常见一个Project之后你经常会建立一个Podfile，然后把自己一些几乎每个项目都要用的第三方库加进去或者，添加ignore文件等等重复的事情，Crafter 是一个可以自动化初始化你xcode工程的默认配置，是由Ruby语言写的。一个script即可以自动化帮你配置好你的项目。</p>
-
-<h3><a href="http://wasted.werk01.de/" target="_blank">Wasted</a></h3>
-
-<p>你是否关心过一个问题，项目体积越来越大，然而图片的体积占了大部分，Wasted只要选取一个ipa文件就可以帮你分析出哪些可以优化，然后生成了一个文件夹是他帮你优化过的图片还有一个表格，你可以选择性的替换原项目的图片，肉眼几乎感觉不到优化前后的区别。</p>
-
-<h3><a href="https://github.com/jeffhodnett/Unused" target="_blank">Unused</a></h3>
-
-<p>之前看到很多人已经说过可以用一个script来检测出项目中未使用过的图片然后用生成一个文件来告诉你哪些没有使用过，这个工具用可视化的界面来检测告诉你更亲切。</p>
-
-<h3><a href="https://itunes.apple.com/cn/app/linguan/id477163052?mt=12" target="_blank">Linguan</a></h3>
-
-<p>是否遇到过一种情况项目起初只有一种语言，经过后续很多版本更新之后老板要求你出个多过语言版本，但是那么多的项目文件和xib，显然手动的去寻找是不科学的，这款工具就可以帮你找出项目里的所有string包括xib中的然后可以导出.Strings格式，然后交给你们翻译的就可以了。</p>
-
-<h2>然后在翻译一段iOS小文（水平有限）</h2>
-
-<hr />
-
-<h3>声明Blocks内联</h3>
-
-<p>译自<a href="http://macoscope.com/blog/calling-blocks-inline/" target="_blank">Calling Blocks Inline</a></p>
-
-<p>我最新发现了一个在oc中使用Blocks非常有趣的的方法,它定义起来也许像in javascript里那样，样子是这样的：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">const</span> <span class="n">NSInteger</span> <span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="o">^</span><span class="n">NSInteger</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">switch</span> <span class="p">(</span><span class="n">type</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">case</span> <span class="nl">TypeOne:</span>
-</span><span class='line'>            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">case</span> <span class="nl">TypeTwo:</span>
-</span><span class='line'>            <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">case</span> <span class="nl">TypeUnknown:</span>
-</span><span class='line'>        <span class="k">case</span> <span class="nl">TypeUnspecified:</span>
-</span><span class='line'>            <span class="k">return</span> <span class="n">NSNotFound</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">default</span><span class="o">:</span>
-</span><span class='line'>            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}());</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>首选，它在定义这个Block的同时赋值给了我们的变量，然后指定了变量是<code>const</code>类型，Block内所有相关的代码都是为了计算出值赋值给变量，这样一来代码更容易阅读，而且这都可以被GCC code block extension所识别，这种方法实现的有点就是可以有<code>return</code>这个关键词，这使得我们可以是用<code>switch</code>并且循环里不使用<code>break</code>，缺点是不得不重复声明变量的类型，而且当我们遇到<code>UISwipeGestureRecognizerDirection</code>是非常讨厌的，例如：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">const</span> <span class="kt">BOOL</span> <span class="n">anyValueIsXyz</span> <span class="o">=</span> <span class="p">(</span><span class="o">^</span><span class="kt">BOOL</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="n">QwertyValue</span> <span class="o">*</span><span class="n">value</span> <span class="k">in</span> <span class="n">values</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">value</span><span class="p">.</span><span class="n">isXyz</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">return</span> <span class="n">YES</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">return</span> <span class="n">NO</span><span class="p">;</span>
-</span><span class='line'><span class="p">}());</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>大家认为呢？</p>
-]]></content>
-  </entry>
-  
-</feed>
+		</div>
+	</div>
+</body>
+</html>
