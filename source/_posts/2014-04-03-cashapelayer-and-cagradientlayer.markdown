@@ -291,7 +291,7 @@ maskLayer = [CALayer layer];
 
 现在当我们设置`progress`值的时候我们要确保它在0到1之间，然后下一步在`layoutSubviews`里面我们重新定义mask的值。
 
-当然也可以从<a href="url" target="_blank">github</a>看项目的更多细节。
+当然也可以从<a href="https://github.com/nrj/GradientProgressView" target="_blank">github</a>看项目的更多细节。
 
 参考：
 
