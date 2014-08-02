@@ -4,7 +4,7 @@
   <title><![CDATA[KooFrank's Blog]]></title>
   <link href="http://phpmaple.github.io/atom.xml" rel="self"/>
   <link href="http://phpmaple.github.io/"/>
-  <updated>2014-04-10T16:10:44+08:00</updated>
+  <updated>2014-08-02T11:16:10+08:00</updated>
   <id>http://phpmaple.github.io/</id>
   <author>
     <name><![CDATA[koofrank]]></name>
@@ -481,7 +481,7 @@
 
 <p>现在当我们设置<code>progress</code>值的时候我们要确保它在0到1之间，然后下一步在<code>layoutSubviews</code>里面我们重新定义mask的值。</p>
 
-<p>当然也可以从<a href="url" target="_blank">github</a>看项目的更多细节。</p>
+<p>当然也可以从<a href="https://github.com/nrj/GradientProgressView" target="_blank">github</a>看项目的更多细节。</p>
 
 <p>参考：</p>
 
